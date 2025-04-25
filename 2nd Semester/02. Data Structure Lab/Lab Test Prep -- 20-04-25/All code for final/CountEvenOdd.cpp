@@ -1,0 +1,51 @@
+/**
+ * C program to count total number of even and odd elements in an array
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+int main()
+{
+    int arr[100],i, size, even=0, odd=0;
+
+    /* Input size of the array */
+    printf("Enter size of the array: ");
+    scanf("%d", &size);
+
+    /* Input array elements */
+    /*printf("Enter %d elements in array: ", size);
+    for(i=0; i<size; i++)
+    {
+        printf("\na[%d]=",i);
+        scanf("%d", &arr[i]);
+    }*/
+
+srand(time(NULL));
+    for(i=0;i<size;i++)
+    {
+	arr[i]=rand();
+	printf("\n%d",arr[i]);
+    }
+    /* Assuming that there are 0 even and odd elements */
+    //even = 0;
+//odd  = 0;
+
+    for(i=0; i<size; i++)
+    {
+        /* If the current element of array is even then increment even count */
+        if(arr[i]%2 == 0)
+        {
+            even++;
+        }
+        else
+        {
+            odd++;
+        }
+    }
+
+    printf("\nTotal even elements: %d", even);
+    printf("\nTotal odd elements: %d", odd);
+
+    return 0;
+}
